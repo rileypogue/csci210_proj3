@@ -32,7 +32,7 @@ void displayHelp() {
 
 void changeDir(char **argv) {
 	if (argv[1] != NULL && argv[2] != NULL) {
-		printf("-rsh: cd: too many command arguments\n");
+		printf("rsh: cd: too many arguments\n");
 	} else if (chdir(argv[1] ? argv[1] : getenv("HOME")) != 0) {
 		perror("-rsh: cd");
 	}
